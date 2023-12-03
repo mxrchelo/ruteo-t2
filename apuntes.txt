@@ -1,0 +1,2 @@
+https://github.com/niclabs/InternetResilience
+https://github.com/niclabs/robustness-and-resilience-in-graphs
