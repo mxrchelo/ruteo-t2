@@ -1,2 +1,19 @@
 https://github.com/niclabs/InternetResilience
 https://github.com/niclabs/robustness-and-resilience-in-graphs
+
+
+Connect to DB:
+   psql -U chelo -d routing -h localhost
+
+Useful commands:
+   show all tables: \dt
+   show data from a table: SELECT * FROM your_table;
+
+Import sql data: psql -U chelo -d routing -h localhost -f <filename>
+
+
+geojson to DB using postgis: 
+   ogr2ogr -f "PostgreSQL" PG:"dbname=routing user=chelo password=chelo host=localhost port=5432" "/home/mquinones/ruteo-t2/data.geojson" -nln arquitectura -nlt PROMOTE_TO_MULTI -append
+
+shapefile to DB using postgis
+ ogr2ogr -f "PostgreSQL" PG:"dbname=your_database user=your_user password=your_password host=localhost port=5432" path/to/your_shapefile.shp
